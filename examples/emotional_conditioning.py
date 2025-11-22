@@ -127,9 +127,13 @@ def condition_to_word(
             'auditory': word_encoding,
         }
         
-        # Set strong physiological response
-        system.virtual_biology.stress_level = stress
-        system.virtual_biology.cortisol_level = 0.9
+        # Set strong physiological response using the proper method
+        arousal = 0.9
+        system.virtual_biology.simulate_emotional_response(
+            valence=emotional_valence,
+            arousal=arousal,
+            stress=stress
+        )
         
         # Update system - forms multimodal memory
         output = system.update(time_step, sensory_input)

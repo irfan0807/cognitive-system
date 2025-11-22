@@ -106,7 +106,7 @@ class VirtualNervousSystem:
         """
         Update breathing rate based on stress and arousal.
         
-        The virtual breathing (hat simulation) starts beating faster under stress.
+        The virtual breathing starts beating faster under stress.
         """
         # Target breathing rate increases with stress and arousal (12-30 breaths/min)
         target_breathing_rate = 12.0 + (self.stress_level + self.arousal) * 9.0
@@ -182,6 +182,38 @@ class VirtualNervousSystem:
         # Increase arousal with music
         arousal_boost = beat_intensity * 0.1
         self.arousal = np.clip(self.arousal + arousal_boost * delta_time, 0.0, 1.0)
+    
+    def set_stress_level(self, stress: float):
+        """
+        Set the stress level (for simulation/testing purposes).
+        
+        Args:
+            stress: Stress level (0.0 to 1.0)
+        """
+        self.stress_level = np.clip(stress, 0.0, 1.0)
+    
+    def simulate_emotional_response(self, valence: float, arousal: float, stress: float):
+        """
+        Simulate an emotional response by setting physiological parameters.
+        
+        Useful for testing and conditioning scenarios.
+        
+        Args:
+            valence: Emotional valence (-1.0 to 1.0)
+            arousal: Arousal level (0.0 to 1.0)
+            stress: Stress level (0.0 to 1.0)
+        """
+        self.stress_level = np.clip(stress, 0.0, 1.0)
+        self.arousal = np.clip(arousal, 0.0, 1.0)
+        
+        # Adjust chemical levels based on valence
+        if valence > 0:
+            self.oxytocin_level = np.clip(0.5 + valence * 0.5, 0.0, 1.0)
+            self.cortisol_level = np.clip(0.3 - valence * 0.3, 0.0, 1.0)
+        else:
+            self.oxytocin_level = np.clip(0.5 + valence * 0.5, 0.0, 1.0)
+            self.cortisol_level = np.clip(0.3 - valence * 0.3, 0.0, 1.0)
+
     
     def get_state(self) -> Dict[str, Any]:
         """

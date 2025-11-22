@@ -101,6 +101,7 @@ class MultimodalMemorySystem:
         # Memory parameters
         self.decay_rate = self.config.get('decay_rate', 0.01)
         self.consolidation_threshold = self.config.get('consolidation_threshold', 0.7)
+        self.min_memory_strength = self.config.get('min_memory_strength', 0.1)
         
         self.logger.info("Multimodal Memory System initialized")
     
@@ -343,7 +344,7 @@ class MultimodalMemorySystem:
         
         # Remove very weak memories
         self.episodic_memories = [
-            m for m in self.episodic_memories if m.strength > 0.1
+            m for m in self.episodic_memories if m.strength > self.min_memory_strength
         ]
     
     def get_memory_count(self) -> int:

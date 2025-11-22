@@ -286,7 +286,7 @@ class BehaviorEngine:
         
         # Simple action selection
         action_space = game_data.get('action_space', [])
-        if action_space:
+        if action_space and len(action_space) > 0:
             # Select action based on motor state
             action_idx = int(np.argmax(np.abs(self.motor_state))) % len(action_space)
             selected_action = action_space[action_idx]
