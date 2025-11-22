@@ -1,0 +1,132 @@
+# Configuration for Cognitive System
+# This file shows all available configuration options
+
+# System Configuration
+system:
+  # Time step for simulation (seconds)
+  time_step: 0.016  # ~60 FPS
+  
+  # Enable/disable learning
+  learning_enabled: true
+  learning_rate: 0.01
+  
+  # Logging level (DEBUG, INFO, WARNING, ERROR)
+  log_level: INFO
+
+# Virtual Nervous System Configuration
+nervous_system:
+  # Base physiological parameters
+  base_heart_rate: 60.0  # beats per minute
+  base_breathing_rate: 12.0  # breaths per minute
+  
+  # Physiological adaptation rates
+  stress_increase_rate: 0.1
+  stress_decrease_rate: 0.05
+  heart_rate_adaptation: 0.1
+  breathing_adaptation: 0.1
+  
+  # Chemical regulation
+  chemical:
+    oxytocin_baseline: 0.5
+    cortisol_baseline: 0.3
+    dopamine_baseline: 0.5
+    decay_rate: 0.05
+    release_rate: 0.1
+
+# Virtual Brain Configuration
+brain:
+  # Neural network architecture
+  neural_network:
+    input_size: 22  # 10 visual + 10 auditory + 2 physiological
+    hidden_size: 50
+    output_size: 20  # 10 motor + 5 attention + others
+    
+  # Brain structure parameters
+  brainstem:
+    motor_smoothing: 0.1
+    autonomic_sensitivity: 1.0
+    
+  pituitary:
+    oxytocin_max: 1.0
+    acth_max: 1.0
+    hormone_half_life: 20.0  # seconds
+    
+  paraventricular_nucleus:
+    stress_sensitivity: 1.0
+    emotion_sensitivity: 1.0
+
+# Memory System Configuration
+memory:
+  # Memory parameters
+  decay_rate: 0.01  # per second
+  consolidation_threshold: 0.7  # emotion threshold for consolidation
+  min_strength: 0.1  # memories below this are forgotten
+  
+  # Recall parameters
+  default_recall_count: 5
+  similarity_weights:
+    visual: 0.33
+    auditory: 0.33
+    emotional: 0.34
+
+# Behavior Engine Configuration
+behavior:
+  # Motor control
+  motor:
+    smoothing_factor: 0.7
+    intensity_range: [0.5, 1.5]
+    tremor_threshold: 0.5  # stress level
+    
+  # Expressive behavior
+  expression:
+    transition_speed: 0.2
+    emotion_mapping:
+      happy: [1.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+      sad: [0.0, 1.0, 0.0, 0.0, 0.0, 0.0]
+      angry: [0.0, 0.0, 1.0, 0.0, 0.0, 0.0]
+      fearful: [0.0, 0.0, 0.0, 1.0, 0.0, 0.0]
+      surprised: [0.0, 0.0, 0.0, 0.0, 1.0, 0.0]
+      disgusted: [0.0, 0.0, 0.0, 0.0, 0.0, 1.0]
+  
+  # Environmental interaction
+  interaction:
+    video:
+      attention_threshold: 0.5
+      engagement_decay: 0.1
+    
+    music:
+      beat_detection_threshold: 0.5
+      movement_intensity: 1.0
+      synchronization_rate: 0.8
+    
+    game:
+      action_selection_noise: 0.1
+      exploration_rate: 0.2
+
+# Example character profiles
+character_profiles:
+  # Calm, stable character
+  calm:
+    nervous_system:
+      base_heart_rate: 55.0
+      stress_increase_rate: 0.05
+      stress_decrease_rate: 0.1
+    behavior:
+      motor:
+        smoothing_factor: 0.9
+  
+  # Excitable, reactive character
+  excitable:
+    nervous_system:
+      base_heart_rate: 70.0
+      stress_increase_rate: 0.2
+      stress_decrease_rate: 0.05
+    behavior:
+      motor:
+        smoothing_factor: 0.5
+        intensity_range: [0.8, 1.8]
+  
+  # Default balanced character
+  balanced:
+    # Uses default values
+    pass
