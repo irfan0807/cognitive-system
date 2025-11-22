@@ -1,162 +1,60 @@
-# Cognitive System - Autonomous Embodied AI Simulation Framework
+# Cognitive System - Embodied Cognition AI
 
-A comprehensive framework for creating autonomous characters based on **embodied cognition**, modeled after the Baby X system. This framework implements real-time neural network simulation, virtual biology, and experiential learning to create truly autonomous characters that can experience and learn from their environment.
+An autonomous AI system with **embodied cognition**, driven by **neural networks** and a **simplified brain simulation model** for **real-time learning**. The system includes a **complete virtual nervous system** and **physiology** where **virtual biology drives virtual cognition**.
 
 ## Overview
 
-The Cognitive System is designed around the principle that **virtual biology drives virtual cognition and real-time learning and experience**. The entire system is centered on the character's virtual body, with all behaviors emerging from the interaction between virtual physiology, neural networks, and environmental experiences.
+This system implements an advanced cognitive architecture that integrates:
 
-## Core Architecture
+- **Virtual Brain Structures**
+  - Brain Stem: Controls basic life functions and arousal
+  - Pituitary Gland: Regulates oxytocin for social bonding
+  - Paraventricular Nucleus (PVN): Manages stress response
 
-### I. Embodied Cognition Paradigm
+- **Neural Networks for Real-time Learning**
+  - Online learning capabilities
+  - Attention mechanisms
+  - Decision-making networks
 
-The system implements the foundational principle of **embodied cognition**, where:
+- **Multimodal Memory System**
+  - Integrates emotion, visual, and auditory stimuli
+  - Memory consolidation based on emotional significance
+  - Context-aware retrieval
 
-- The model is centered on its **virtual body**
-- The character is animated live by **neural networks** utilizing a simplified brain simulation model
-- The core goal is creating an **autonomous character that can actually experience things**
-- The character is designed to **learn in real time** through experiences
-
-### II. Virtual Biology and Nervous System
-
-The character is entirely driven by its **virtual biology**, featuring:
-
-#### Complete Virtual Nervous System
-- **Whole virtual nervous system** controlling all aspects of character behavior
-- **Virtual physiology** generating realistic physiological responses
-- Real-time physiological adaptation (e.g., virtual heart and breathing rate increase when stressed)
-
-#### Virtual Brain Model
-
-The **virtual brain** is modeled live with specific functional structures:
-
-1. **Brainstem**
-   - Connects the brain to the body
-   - Governs how the character acts, moves, and responds
-   - Contains **oculomotor nuclei** for eye movement control
-   - Manages autonomic functions (respiration, cardiovascular control)
-
-2. **Chemical Regulation System**
-   - **Pituitary gland** releasing simulated substances like **oxytocin**
-   - Hormone regulation affecting emotional and physiological states
-   - **Paraventricular nucleus** coordinating stress response and autonomic regulation
-
-3. **Neural Network Controller**
-   - Real-time processing of sensory and physiological inputs
-   - Adaptive learning from experiences
-   - Generation of motor commands and behavioral responses
-
-### III. Behavior Generation and Memory System
-
-#### Behavior Engine
-- The complex virtual brain model **generates all the character's behaviors in real time**
-- Motor behaviors, expressive behaviors, and attention allocation
-- Environmental interaction capabilities (watching videos, playing games)
-- **Automatic response to stimuli** like music (responding to the beat)
-
-#### Multimodal Memory System
-
-The system constructs a **history of memories** of events encountered through life. When a memory is formed (e.g., emotional conditioning by a word like "fire"), it is reconstructed **multimodally**:
-
-- **Emotion at the time** (valence and arousal)
-- **Visual stimuli at the time** (what was seen)
-- **Auditory stimulation at the time** (what was heard)
-- **Physiological state** (heart rate, hormone levels, stress)
-- **Behavioral context** (what actions were being performed)
-
-This multimodal integration enables rich experiential learning and realistic memory recall based on any combination of sensory, emotional, or contextual cues.
+- **Virtual Nervous System & Physiology**
+  - Autonomic nervous system (sympathetic/parasympathetic)
+  - Neurotransmitter modulation (dopamine, serotonin, norepinephrine, GABA)
+  - Homeostatic regulation
 
 ## Key Features
 
-### 1. Real-Time Physiological Simulation
-```python
-# Virtual heart rate increases with stress
-if character.stressed:
-    virtual_heart.rate_increase()
-    virtual_breathing.rate_increase()
-```
+### 1. Virtual Biology Drives Virtual Cognition
 
-### 2. Neural Network-Driven Behavior
-All character behaviors emerge from neural network processing, not scripted responses. The character genuinely experiences and responds to its environment.
+The system demonstrates how biological processes influence cognitive functions:
 
-### 3. Experiential Learning
-The character learns from its experiences in real-time, building associations between stimuli, emotions, and outcomes.
+- **Arousal** from the brain stem modulates attention and heart rate
+- **Oxytocin** from the pituitary gland promotes social bonding and buffers stress
+- **Stress responses** from the PVN affect decision-making
+- **Neurotransmitters** modulate mood, motivation, attention, and calmness
+- **Physiological state** (energy, homeostasis) influences behavior
 
-### 4. Environmental Interaction
-- Watch videos and respond to visual content
-- Play games on simulated screens
-- Respond rhythmically to music
-- Interact with objects in the environment
+### 2. Multimodal Memory Integration
 
-### 5. Chemical Regulation
-Simulated hormones and neurotransmitters (oxytocin, cortisol, dopamine) regulate emotional and physiological states, creating realistic stress responses and social bonding behaviors.
+Memories are formed by integrating:
+- Visual features
+- Auditory features  
+- Emotional valence and arousal
+- Physiological state at the time
+- Contextual information
 
-## System Components
+Emotionally salient experiences are consolidated more strongly, mimicking biological memory processes.
 
-### Core Components
-- `EmbodiedCognitionSystem`: Main system orchestrating all components
-- `NeuralNetworkController`: Real-time neural processing and learning
-- `VirtualNervousSystem`: Physiological simulation and regulation
-- `VirtualBrain`: Brain structures (brainstem, pituitary, PVN, oculomotor nuclei)
-- `MultimodalMemorySystem`: Experience storage and multimodal memory reconstruction
-- `BehaviorEngine`: Real-time behavior generation
+### 3. Real-time Learning
 
-## Architecture Diagram
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│                 Embodied Cognition System                    │
-├─────────────────────────────────────────────────────────────┤
-│                                                               │
-│  ┌──────────────────┐         ┌─────────────────────────┐  │
-│  │  Sensory Input   │────────▶│   Virtual Brain         │  │
-│  │  - Visual        │         │  - Brainstem            │  │
-│  │  - Auditory      │         │  - Oculomotor Nuclei    │  │
-│  │  - Tactile       │         │  - Pituitary Gland      │  │
-│  └──────────────────┘         │  - Paraventricular      │  │
-│           │                    │    Nucleus              │  │
-│           ▼                    └──────────┬──────────────┘  │
-│  ┌──────────────────┐                     │                 │
-│  │ Virtual Nervous  │◀────────────────────┘                 │
-│  │    System        │                                       │
-│  │  - Heart Rate    │         ┌─────────────────────────┐  │
-│  │  - Breathing     │────────▶│  Behavior Engine        │  │
-│  │  - Stress        │         │  - Motor Control        │  │
-│  │  - Hormones      │         │  - Expressions          │  │
-│  └──────────────────┘         │  - Attention            │  │
-│           │                    └──────────┬──────────────┘  │
-│           │                                │                 │
-│           ▼                                ▼                 │
-│  ┌──────────────────────────────────────────────────────┐  │
-│  │         Neural Network Controller                     │  │
-│  │  - Forward Processing                                 │  │
-│  │  - Real-time Learning                                 │  │
-│  │  - Adaptation                                         │  │
-│  └─────────────────────────┬────────────────────────────┘  │
-│                             │                               │
-│                             ▼                               │
-│  ┌──────────────────────────────────────────────────────┐  │
-│  │      Multimodal Memory System                         │  │
-│  │  - Emotional Context                                  │  │
-│  │  - Visual Memory                                      │  │
-│  │  - Auditory Memory                                    │  │
-│  │  - Physiological State                                │  │
-│  └──────────────────────────────────────────────────────┘  │
-│                                                               │
-└─────────────────────────────────────────────────────────────┘
-```
-
-## Fundamental Relationship
-
-**Virtual Biology → Virtual Cognition → Real-Time Learning & Experience**
-
-The entire simulation ensures that virtual biology drives virtual cognition, which in turn drives real-time learning and experience. This creates a truly autonomous character that:
-
-1. **Experiences** its environment through virtual senses and physiology
-2. **Responds** authentically based on its current physiological and emotional state
-3. **Learns** from experiences by forming multimodal memories
-4. **Adapts** its behavior based on accumulated experiences
-5. **Generates** behaviors in real-time through neural network processing
+Neural networks adapt online through:
+- Continuous sensory processing
+- Reward-based learning
+- Experience-driven weight updates
 
 ## Installation
 
@@ -174,89 +72,157 @@ pip install -e .
 
 ## Quick Start
 
-See the `examples/` directory for complete examples. Here's a basic usage:
-
 ```python
-from cognitive_system import (
-    EmbodiedCognitionSystem,
-    VirtualNervousSystem,
-    VirtualBrain,
-    MultimodalMemorySystem,
-    BehaviorEngine
-)
-from cognitive_system.core.neural_network import NeuralNetworkController
+from cognitive_system.embodied_cognition import EmbodiedCognitionSystem
+import numpy as np
 
-# Create system components
-nervous_system = VirtualNervousSystem()
-brain = VirtualBrain()
-memory_system = MultimodalMemorySystem()
-behavior_engine = BehaviorEngine()
-neural_network = NeuralNetworkController(
-    input_size=22,
-    hidden_size=50,
-    output_size=20
+# Initialize the system
+system = EmbodiedCognitionSystem(
+    visual_dim=64,
+    auditory_dim=32,
+    attention_dim=128,
+    learning_rate=0.01
 )
 
-# Create main system
-system = EmbodiedCognitionSystem()
-system.setup(nervous_system, neural_network, memory_system, behavior_engine)
+# Process sensory input
+visual_input = np.random.randn(64) * 0.5
+auditory_input = np.random.randn(32) * 0.5
 
-# Start simulation
-system.start()
+state = system.process_sensory_input(
+    visual_input=visual_input,
+    auditory_input=auditory_input,
+    social_context=0.8,  # Social interaction level
+    threat_level=0.1,    # Threat perception
+    reward_signal=0.6    # Positive reinforcement
+)
 
-# Simulation loop
-for t in range(1000):
-    # Provide sensory input
-    sensory_input = {
-        'visual': np.random.randn(10) * 0.1,
-        'auditory': np.random.randn(10) * 0.1,
-    }
-    
-    # Update system
-    output = system.update(delta_time=0.016, sensory_input=sensory_input)
-    
-    # Character learns from experiences
-    if t % 100 == 0:
-        system.learn_from_experience()
+# Get current state
+summary = system.get_state_summary()
+print(f"Arousal: {summary['arousal']:.3f}")
+print(f"Oxytocin: {summary['oxytocin']:.3f}")
+print(f"Stress: {summary['stress']:.3f}")
+print(f"Mood: {summary['mood']:.3f}")
+
+# Make a decision
+actions = ["approach", "avoid", "explore", "rest"]
+action, confidence = system.make_decision(actions)
+print(f"Selected action: {action} (confidence: {confidence:.3f})")
 ```
 
-## Requirements
+## Running the Demo
 
-- Python 3.8+
-- NumPy
-- (Optional) TensorFlow/PyTorch for advanced neural network models
+```bash
+python examples/demo.py
+```
 
-## Documentation
+This will run a demonstration showing:
+- Calm, positive social interaction
+- Stressful, threatening situation
+- Social buffering (how social support reduces stress)
+- Decision-making influenced by biological state
+- Memory formation and retrieval
+- Integration of biology and cognition
 
-Detailed documentation is available in the `docs/` directory:
+## Architecture
 
-- `architecture.md`: Detailed system architecture
-- `virtual_biology.md`: Virtual biology and nervous system details
-- `memory_system.md`: Multimodal memory system guide
-- `behavior_engine.md`: Behavior generation documentation
-- `examples.md`: Usage examples and tutorials
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    Sensory Input Layer                      │
+│              (Visual, Auditory, Social, Threat)             │
+└────────────────────────┬────────────────────────────────────┘
+                         │
+                         ▼
+┌─────────────────────────────────────────────────────────────┐
+│                   Virtual Brain Structures                  │
+│  ┌─────────────┐  ┌──────────────┐  ┌──────────────────┐  │
+│  │ Brain Stem  │  │  Pituitary   │  │ Paraventricular  │  │
+│  │  (Arousal)  │  │  (Oxytocin)  │  │   Nucleus (PVN)  │  │
+│  └─────────────┘  └──────────────┘  └──────────────────┘  │
+└────────────────────────┬────────────────────────────────────┘
+                         │
+                         ▼
+┌─────────────────────────────────────────────────────────────┐
+│              Virtual Nervous System & Physiology            │
+│  ┌────────────────────────┐  ┌──────────────────────────┐  │
+│  │  Autonomic System      │  │  Neurotransmitters       │  │
+│  │  (Sympathetic/Para)    │  │  (DA, 5HT, NE, GABA)     │  │
+│  └────────────────────────┘  └──────────────────────────┘  │
+└────────────────────────┬────────────────────────────────────┘
+                         │
+                         ▼
+┌─────────────────────────────────────────────────────────────┐
+│                  Cognitive Processing Layer                 │
+│  ┌────────────────────────┐  ┌──────────────────────────┐  │
+│  │  Attention Network     │  │  Decision Network        │  │
+│  │  (Real-time Learning)  │  │  (Biology-driven)        │  │
+│  └────────────────────────┘  └──────────────────────────┘  │
+└────────────────────────┬────────────────────────────────────┘
+                         │
+                         ▼
+┌─────────────────────────────────────────────────────────────┐
+│                  Multimodal Memory System                   │
+│         (Emotion + Visual + Auditory Integration)           │
+└────────────────────────┬────────────────────────────────────┘
+                         │
+                         ▼
+┌─────────────────────────────────────────────────────────────┐
+│                    Behavioral Output                        │
+│              (Actions, Decisions, Learning)                 │
+└─────────────────────────────────────────────────────────────┘
+```
 
-## Contributing
+## Components
 
-Contributions are welcome! Please see `CONTRIBUTING.md` for guidelines.
+### Brain Module (`cognitive_system.brain`)
+- `BrainStem`: Basic life functions and arousal control
+- `PituitaryGland`: Oxytocin regulation for social bonding
+- `ParaventricularNucleus`: Stress response and hormonal integration
+- `VirtualBrain`: Integrates all brain structures
+
+### Neural Module (`cognitive_system.neural`)
+- `NeuralLayer`: Individual neural network layer with online learning
+- `ActivationFunction`: Sigmoid, tanh, ReLU activations
+- `RealtimeNeuralNetwork`: Multi-layer network for real-time learning
+
+### Memory Module (`cognitive_system.memory`)
+- `MultimodalMemory`: Single memory integrating multiple modalities
+- `MemoryConsolidation`: Strengthens emotionally significant memories
+- `MultimodalMemorySystem`: Complete memory storage and retrieval
+
+### Physiology Module (`cognitive_system.physiology`)
+- `Neurotransmitter`: Models neurotransmitter dynamics
+- `AutonomicNervousSystem`: Sympathetic/parasympathetic balance
+- `VirtualNervousSystem`: Complete nervous system simulation
+- `VirtualPhysiology`: Integrated physiological processes
+
+### Embodied Cognition (`cognitive_system.embodied_cognition`)
+- `EmbodiedCognitionSystem`: Main integration where biology drives cognition
+
+## Scientific Basis
+
+This system is inspired by:
+- **Embodied Cognition Theory**: Cognition is grounded in bodily experiences
+- **Affective Neuroscience**: Emotions and biology influence decision-making
+- **Predictive Coding**: Brain as prediction machine modulated by physiology
+- **Neurobiological Models**: Simplified models of real brain structures
 
 ## License
 
-MIT License - see `LICENSE` file for details.
+MIT License
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Citation
 
-If you use this framework in your research, please cite:
+If you use this system in your research, please cite:
 
-```bibtex
-@software{cognitive_system,
-  title={Cognitive System: Autonomous Embodied AI Simulation Framework},
-  author={Cognitive System Team},
-  year={2024},
+```
+@software{cognitive_system_2025,
+  title={Cognitive System: Embodied Cognition AI},
+  author={irfan0807},
+  year={2025},
   url={https://github.com/irfan0807/cognitive-system}
 }
 ```
-
-## Acknowledgments
-
-This framework is inspired by the Baby X system and the principles of embodied cognition, implementing the requirement that virtual biology must drive virtual cognition and enable real-time learning through genuine experiences.
