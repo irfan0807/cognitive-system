@@ -16,6 +16,7 @@ import os
 import time
 import logging
 import argparse
+import random
 from datetime import datetime
 
 # Add project root to path
@@ -400,7 +401,6 @@ class TerminalCognitiveApp:
             responses.append("I can see you through the camera.")
         
         # Return a random response or None
-        import random
         if responses and random.random() < 0.7:  # 70% chance to speak
             return random.choice(responses)
         return None
