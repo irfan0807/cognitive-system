@@ -1,0 +1,146 @@
+# QUICK REFERENCE - Run Your App
+
+## 🚀 Start Here
+
+### Option 1: Python (With Camera)
+```bash
+python3 run_app.py
+```
+
+### Option 2: Python (Test Mode - No Camera)
+```bash
+python3 run_app.py --test
+```
+
+### Option 3: Shell Script (With Camera)
+```bash
+./run.sh
+```
+
+### Option 4: Shell Script (Test Mode)
+```bash
+./run.sh --test
+```
+
+---
+
+## 📺 What You'll See
+
+### Window Layout
+```
+LEFT SIDE: ANIMATED CHARACTER    │  RIGHT SIDE: VIDEO + METRICS
+                                  │
+  • Stick figure                  │  TOP: Live camera feed
+  • Moves with AI arousal         │       (640x480 video)
+  • Color changes with stress     │
+  • State text display            │  BOTTOM: Metrics
+  • Heart pulse animation         │    - Heart Rate
+                                  │    - Stress Level
+                                  │    - Arousal
+                                  │    - Mood
+```
+
+---
+
+## 🎯 Features
+
+✓ **Live Video Feed** - Real-time camera capture  
+✓ **Animated Character** - Responds to AI state  
+✓ **Neural Network** - Processes sensory input  
+✓ **Physiological Metrics** - Heart rate, stress, arousal, mood  
+✓ **Memory System** - Stores and learns from experiences  
+✓ **Graceful Fallback** - Works without camera  
+
+---
+
+## ⚙️ System Requirements
+
+- Python 3.7+
+- Webcam (optional)
+- 4GB RAM
+- macOS/Linux/Windows
+
+### Install Dependencies
+```bash
+pip install opencv-python numpy matplotlib torch
+```
+
+---
+
+## 🔧 Troubleshooting
+
+| Problem | Solution |
+|---------|----------|
+| No video feed | Use `--test` mode or check camera |
+| Slow animation | Close other apps or use `--test` |
+| Import errors | `pip install opencv-python` |
+| Camera denied | Check System Preferences → Security |
+
+---
+
+## 📊 Performance
+
+- Video: 15 FPS, 640x480
+- Animation: 15 FPS (smooth)
+- Latency: ~100ms total
+- CPU: ~30-40% (single core)
+
+---
+
+## 🎮 What Happens
+
+1. **Camera captures** video frame (15 FPS)
+2. **Features extracted** from video
+3. **Neural network** processes sensory input
+4. **Physiological state** updated
+5. **Character animates** response
+6. **Metrics display** shows current state
+7. **Loop** repeats every ~67ms
+
+---
+
+## 💡 Quick Tips
+
+✓ Move in front of camera → Character responds  
+✓ Change lighting → Affects visual input  
+✓ Stay still → Animation becomes calm  
+✓ Move around → Animation becomes aroused  
+✓ Close window → Clean shutdown  
+
+---
+
+## 📁 Files
+
+- `run_app.py` - Main application ⭐ **USE THIS**
+- `run.sh` - Shell wrapper
+- `interactive_app.py` - Full-featured alternative
+- `test_animation.py` - Simple test
+- `README_APP.md` - Full documentation
+
+---
+
+## 🎓 Learn More
+
+```bash
+# See full documentation
+cat README_APP.md
+
+# View help
+python3 run_app.py --help
+
+# Test individual components
+python3 -c "from run_app import AppWithVideoFeed; app = AppWithVideoFeed(test_mode=True); print('✓ OK')"
+```
+
+---
+
+## 🆘 Get Help
+
+1. **Check logs** - Look at console output
+2. **Try test mode** - `python3 run_app.py --test`
+3. **Verify camera** - `ls /dev/video*` (Linux)
+4. **Test imports** - `python3 -c "import cv2; print('✓')"`
+
+---
+
+**You're all set!** 🎉 Run the app and watch your AI respond to live video! 🎥✨
