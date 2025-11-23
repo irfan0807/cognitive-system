@@ -53,6 +53,11 @@ class ConsciousCognitionSystem(EmbodiedCognitionSystem):
             learning_rate=learning_rate
         )
         
+        # Store dimensions
+        self.visual_dim = visual_dim
+        self.auditory_dim = auditory_dim
+        self.attention_dim = attention_dim
+        
         # Deep neural network controller
         self.deep_controller = DeepNeuralController(consciousness_dim=256)
         
@@ -231,7 +236,7 @@ class ConsciousCognitionSystem(EmbodiedCognitionSystem):
             experiences.append({
                 'step': step_count,
                 'consciousness_state': consciousness_output['integrated_state']['consciousness_state'],
-                'emotional_state': state['emotional_state'],
+                'emotional_state': state.emotional_state,  # CognitiveState is a dataclass
                 'physiological_state': consciousness_output['physiological_state'],
                 'timestamp': time.time() - start_time
             })
@@ -269,7 +274,7 @@ class ConsciousCognitionSystem(EmbodiedCognitionSystem):
                 print(f"Step {step}:")
                 print(f"  Consciousness arousal: {consciousness['integrated_state']['arousal_modulation']:.3f}")
                 print(f"  Attention focus: {consciousness['integrated_state']['attention_focus']:.3f}")
-                print(f"  Emotional valence: {state['emotional_state']['valence']:.3f}")
+                print(f"  Emotional valence: {state.emotional_state[0]:.3f}")  # state is CognitiveState dataclass
                 print(f"  Heart rate: {consciousness['physiological_state']['heart_rate']:.1f} bpm")
                 print()
         
