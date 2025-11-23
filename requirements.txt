@@ -4,3 +4,6 @@ torch>=2.0.0
 opencv-python>=4.8.0
 sounddevice>=0.4.6
 librosa>=0.10.0
+matplotlib>=3.0.0
+rich>=13.0.0
+pyttsx3>=2.90

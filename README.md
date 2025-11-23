@@ -2,6 +2,21 @@
 
 An autonomous AI system with **embodied cognition**, driven by **deep neural networks** and a **simplified brain simulation model** for **real-time learning** and **consciousness simulation**. The system includes a **complete virtual nervous system** and **physiology** where **virtual biology drives virtual cognition**, enhanced with **live video and audio feed processing**.
 
+## 🆕 NEW: Terminal Interface - Interactive AI Chat
+
+**Experience the AI through a retro green terminal!** The system can now:
+- 👁️ See you through your camera (displayed as ASCII art)
+- 🗣️ Talk to you using text-to-speech
+- 💚 Beautiful green-on-black terminal theme
+- 🧠 Real-time state monitoring
+
+**Quick Start:**
+```bash
+python terminal_app.py
+```
+
+See [Terminal Quick Start Guide](TERMINAL_QUICK_START.md) for details.
+
 ## 🆕 NEW: Deep Neural Network Consciousness
 
 The system now includes advanced deep learning capabilities for consciousness simulation:
@@ -217,6 +232,31 @@ This demonstrates the RAG system with live video/audio processing:
 - Real-time cognitive behavior visualization
 - RAG-based context retrieval and decision-making
 - Multimodal memory formation and retrieval
+
+### 🆕 Terminal Interface - Interactive AI Chat
+
+Interact with the AI through a retro green-on-black terminal interface:
+
+```bash
+# Full mode with camera and speech
+python terminal_app.py
+
+# Camera only (no speech)
+python terminal_app.py --no-speech
+
+# Text only (no camera)
+python terminal_app.py --no-camera
+```
+
+The terminal interface features:
+- Live camera feed displayed as ASCII art in the terminal
+- AI sees you and responds contextually
+- Text-to-speech for AI responses
+- Real-time display of arousal, mood, stress, heart rate, and attention
+- Retro green-on-black terminal theme
+- Conversation history
+
+See [Terminal Interface Documentation](TERMINAL_INTERFACE_README.md) for details.
 
 ### Animated Person Visualization
 
