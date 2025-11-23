@@ -1,6 +1,19 @@
-# Cognitive System - Embodied Cognition AI
+# Cognitive System - Embodied Cognition AI with Deep Neural Networks
 
-An autonomous AI system with **embodied cognition**, driven by **neural networks** and a **simplified brain simulation model** for **real-time learning**. The system includes a **complete virtual nervous system** and **physiology** where **virtual biology drives virtual cognition**.
+An autonomous AI system with **embodied cognition**, driven by **deep neural networks** and a **simplified brain simulation model** for **real-time learning** and **consciousness simulation**. The system includes a **complete virtual nervous system** and **physiology** where **virtual biology drives virtual cognition**, enhanced with **live video and audio feed processing**.
+
+## 🆕 NEW: Deep Neural Network Consciousness
+
+The system now includes advanced deep learning capabilities for consciousness simulation:
+
+- **Deep CNN Visual Cortex**: Hierarchical processing (V1→V2→V4→IT layers)
+- **LSTM Auditory Cortex**: Temporal audio sequence processing
+- **Multimodal Integration**: Cross-modal attention and fusion
+- **Global Workspace**: Consciousness state representation
+- **Live Feed Processing**: Real-time video and audio capture
+- **Embodied Integration**: Deep learning merged with virtual biology
+
+See [Deep Neural Networks Documentation](docs/DEEP_NEURAL_NETWORKS.md) for details.
 
 ## Overview
 
@@ -25,6 +38,13 @@ This system implements an advanced cognitive architecture that integrates:
   - Autonomic nervous system (sympathetic/parasympathetic)
   - Neurotransmitter modulation (dopamine, serotonin, norepinephrine, GABA)
   - Homeostatic regulation
+
+- **🆕 Deep Neural Networks for Consciousness**
+  - Visual cortex CNN with hierarchical layers
+  - Auditory cortex RNN with temporal processing
+  - Multimodal integration network
+  - Global workspace consciousness mechanism
+  - Live video and audio feed processing
 
 ## Key Features
 
@@ -109,13 +129,57 @@ action, confidence = system.make_decision(actions)
 print(f"Selected action: {action} (confidence: {confidence:.3f})")
 ```
 
+### Deep Neural Network Consciousness
+
+```python
+from cognitive_system.core.conscious_cognition import ConsciousCognitionSystem
+
+# Initialize system with deep neural networks
+system = ConsciousCognitionSystem(
+    visual_dim=64,
+    auditory_dim=32,
+    attention_dim=128,
+    learning_rate=0.01,
+    use_live_feeds=False  # Set True for camera/microphone
+)
+
+# Process live consciousness (uses simulated or real feeds)
+output = system.process_live_consciousness()
+
+# Access consciousness state
+consciousness = output['consciousness_features']['consciousness_state']
+print(f"Consciousness state dimension: {consciousness.shape}")
+
+# See physiological integration
+physiology = output['physiological_state']
+print(f"Arousal: {physiology['arousal']:.3f}")
+print(f"Heart rate: {physiology['heart_rate']:.1f} bpm")
+print(f"Stress: {physiology['stress']:.3f}")
+
+# Run interactive demonstration
+system.demonstrate_consciousness(duration=10.0)
+```
+
 ## Running the Demo
 
+### Basic Embodied Cognition Demo
 ```bash
 python examples/demo.py
 ```
 
-This will run a demonstration showing:
+### 🆕 Deep Neural Network Consciousness Demo
+```bash
+# Simulated feeds (no camera/mic required)
+python examples/consciousness_demo.py --mode simulated
+
+# Live feeds (requires camera/mic)
+python examples/consciousness_demo.py --mode live
+
+# Interactive detailed demonstration
+python examples/consciousness_demo.py --mode interactive
+```
+
+This will run demonstrations showing:
 - Calm, positive social interaction
 - Stressful, threatening situation
 - Social buffering (how social support reduces stress)
