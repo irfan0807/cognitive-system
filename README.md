@@ -187,6 +187,24 @@ This will run demonstrations showing:
 - Memory formation and retrieval
 - Integration of biology and cognition
 
+### Animated Person Visualization
+
+See the neural network in action with an animated character that responds to cognitive states:
+
+```bash
+# Generate static visualizations
+python examples/animated_person_simple_demo.py
+
+# Run full animation (requires display)
+python examples/animated_person_demo.py
+```
+
+The animated person shows:
+- Character appearance changes based on emotional state (color reflects valence)
+- Body movements driven by arousal and stress levels
+- Real-time heart rate pulsing visualization
+- Neural network metrics displayed in real-time
+
 ## Architecture
 
 ```
@@ -258,6 +276,13 @@ This will run demonstrations showing:
 - `AutonomicNervousSystem`: Sympathetic/parasympathetic balance
 - `VirtualNervousSystem`: Complete nervous system simulation
 - `VirtualPhysiology`: Integrated physiological processes
+
+### Visualization Module (`cognitive_system.visualization`)
+- `AnimatedPerson`: Visual representation of a character connected to the neural network
+  - Real-time animation driven by neural network states
+  - Emotional expression through color and movement
+  - Physiological indicators (heart rate, breathing)
+  - Metrics dashboard showing all neural network parameters
 
 ### Embodied Cognition (`cognitive_system.embodied_cognition`)
 - `EmbodiedCognitionSystem`: Main integration where biology drives cognition

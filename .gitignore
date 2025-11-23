@@ -40,3 +40,7 @@ htmlcov/
 # OS
 .DS_Store
 Thumbs.db
+
+# Animated person output directories
+animated_person_outputs/
+examples/animated_person_outputs/
