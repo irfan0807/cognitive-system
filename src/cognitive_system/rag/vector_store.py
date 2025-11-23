@@ -6,6 +6,7 @@ multimodal embeddings from video and audio streams.
 """
 
 import numpy as np
+import time
 from typing import List, Dict, Any, Optional, Tuple
 from dataclasses import dataclass
 import logging
@@ -72,7 +73,6 @@ class VectorStore:
         
         # Use current time if timestamp not provided
         if timestamp is None:
-            import time
             timestamp = time.time()
         
         # Normalize the embedding for cosine similarity

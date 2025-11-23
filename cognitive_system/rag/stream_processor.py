@@ -157,10 +157,19 @@ class VideoStreamProcessor:
             # Add more high-frequency patterns
             frame += np.random.randn(self.frame_height, self.frame_width, 3) * 0.5
         elif scene_type == 'calm':
-            # Smooth patterns
-            from scipy.ndimage import gaussian_filter
+            # Smooth patterns - simple averaging as alternative to gaussian filter
+            # This avoids scipy dependency while providing similar effect
+            kernel_size = 5
             for c in range(3):
-                frame[:, :, c] = gaussian_filter(frame[:, :, c], sigma=5)
+                channel = frame[:, :, c]
+                smoothed = np.copy(channel)
+                for i in range(kernel_size, self.frame_height - kernel_size):
+                    for j in range(kernel_size, self.frame_width - kernel_size):
+                        smoothed[i, j] = np.mean(
+                            channel[i-kernel_size:i+kernel_size+1, 
+                                   j-kernel_size:j+kernel_size+1]
+                        )
+                frame[:, :, c] = smoothed
         elif scene_type == 'complex':
             # Add structured patterns
             x = np.linspace(0, 2 * np.pi, self.frame_width)
