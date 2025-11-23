@@ -7,7 +7,7 @@ to the cognitive system's neural network states in real-time.
 
 import numpy as np
 import matplotlib.pyplot as plt
-from matplotlib.patches import Circle, Rectangle, Polygon
+from matplotlib.patches import Circle, Rectangle
 from matplotlib.animation import FuncAnimation
 from typing import Dict, Any, Optional
 import logging
@@ -123,7 +123,6 @@ class AnimatedPerson:
             ('Emotion (Arousal)', 2),
         ]
         
-        y_pos = 9
         for metric_name, y in metrics:
             # Label
             self.ax_metrics.text(0.02, y + 0.3, metric_name, 
