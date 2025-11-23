@@ -46,6 +46,12 @@ This system implements an advanced cognitive architecture that integrates:
   - Global workspace consciousness mechanism
   - Live video and audio feed processing
 
+- **RAG System for Live Video/Audio** 🆕
+  - Real-time processing of video and audio streams
+  - Multimodal embedding extraction and fusion
+  - Vector-based memory retrieval for context-aware decisions
+  - Real-time cognitive behavior visualization
+
 ## Key Features
 
 ### 1. Virtual Biology Drives Virtual Cognition
@@ -75,6 +81,18 @@ Neural networks adapt online through:
 - Continuous sensory processing
 - Reward-based learning
 - Experience-driven weight updates
+
+### 4. RAG System for Live Streams 🆕
+
+The system includes a state-of-the-art RAG (Retrieval-Augmented Generation) system:
+
+- **Live Video/Audio Processing**: Extracts features from live streams in real-time
+- **Vector-based Memory**: Stores multimodal embeddings for efficient retrieval
+- **Context-Aware Decisions**: Retrieves relevant past experiences to inform current decisions
+- **Cognitive Visualization**: Real-time display of attention, emotions, physiology, and decision-making
+- **Multimodal Fusion**: Combines visual and audio information with attention weighting
+
+See [RAG System Documentation](docs/RAG_SYSTEM.md) for detailed information.
 
 ## Installation
 
@@ -187,6 +205,19 @@ This will run demonstrations showing:
 - Memory formation and retrieval
 - Integration of biology and cognition
 
+### RAG System Demo 🆕
+
+```bash
+python examples/rag_live_stream_demo.py
+```
+
+This demonstrates the RAG system with live video/audio processing:
+- Processing different scene types (calm, active, complex)
+- Different audio types (speech, music, noise, ambient)
+- Real-time cognitive behavior visualization
+- RAG-based context retrieval and decision-making
+- Multimodal memory formation and retrieval
+
 ### Animated Person Visualization
 
 See the neural network in action with an animated character that responds to cognitive states:
@@ -286,6 +317,15 @@ The animated person shows:
 
 ### Embodied Cognition (`cognitive_system.embodied_cognition`)
 - `EmbodiedCognitionSystem`: Main integration where biology drives cognition
+
+### RAG Module (`cognitive_system.rag`) 🆕
+- `MultimodalRAGSystem`: Complete RAG system for live video/audio
+- `VectorStore`: Efficient vector database for similarity search
+- `VideoStreamProcessor`: Extracts features from video frames
+- `AudioStreamProcessor`: Extracts features from audio chunks
+- `CognitiveVisualizer`: Real-time cognitive behavior visualization
+
+See [RAG System Documentation](docs/RAG_SYSTEM.md) for more details.
 
 ## Scientific Basis
 
